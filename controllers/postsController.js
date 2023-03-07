@@ -4,7 +4,8 @@ const fs = require("fs")
 const { check, validationResult } = require("express-validator")
 const Users = require("../models/User")
 const Posts = require("../models/Posts")
-const dateFormat = require('dateformat');
+const dateFormat = require('date-and-time')
+const now = new Date();
 const postForm = (req, res) => {
     res.render('createPost', { title: 'Create new post', login: true, errors: [], input_title: '', body: '' })
 }
